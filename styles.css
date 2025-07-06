@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh;
+}
+
+header {
+  background: #6a0dad;
+  padding: 15px;
+  text-align: left;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: #aaa;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-side,
+.output-side {
+  flex: 1 1 45%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+select,
+input[type="color"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5500aa;
+}
+
+#qrContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#logoName {
+  font-size: 0.85rem;
+  color: #555;
+  display: block;
+  margin-top: 6px;
+}
+
+.download-btn {
+  display: block;
+  text-align: center;
+  background: #28a745;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}

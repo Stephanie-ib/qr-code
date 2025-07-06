@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>ZapQR</h1>
+    </header>
+
+    <main class="container">
+      <div class="layout">
+        <div class="form-side">
+          <div class="form-group">
+            <label>Text / URL</label>
+            <input type="text" id="qrText" placeholder="https://example.com" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Size</label>
+              <select id="qrSize">
+                <option value="200">200x200</option>
+                <option value="250" selected>250x250</option>
+                <option value="300">300x300</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Color</label>
+              <input type="color" id="qrColor" value="#6a0dad" />
+            </div>
+            <div class="form-group">
+              <label>Background</label>
+              <input type="color" id="bgColor" value="#ffffff" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="logoUpload">Upload Logo</label>
+            <input type="file" id="logoUpload" accept="image/*" />
+            <small id="logoName">No file chosen</small>
+          </div>
+        </div>
+
+        <div class="output-side">
+          <button id="generateBtn">Generate QR Code</button>
+
+          <div id="qrContainer"></div>
+
+          <a id="downloadBtn" class="download-btn" href="#">Download QR</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 QR Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
